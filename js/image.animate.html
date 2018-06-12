@@ -120,12 +120,17 @@
             text-transform: uppercase;
         }
 
-        figure.effect-zoe h2,
-        figure.effect-zoe p.icon-links a {
-            /* -webkit-transition: -webkit-transform 0.35s;
+        figure.effect-zoe h2{
+            -webkit-transition: -webkit-transform 0.35s;
             transition: transform 0.35s;
             -webkit-transform: translate3d(0, 200%, 0);
-            transform: translate3d(0, 200%, 0); */
+            transform: translate3d(0, 200%, 0);
+        }
+        figure.effect-zoe p.icon-links a {
+            -webkit-transition: -webkit-transform 0.35s;
+            transition: transform 0.35s;
+            -webkit-transform: translate3d(0, 300%, 0);
+            transform: translate3d(0, 300%, 0);
         }
 
         figure.effect-zoe p.icon-links {
@@ -134,9 +139,10 @@
         }
 
         figure.effect-zoe p.icon-links a {
+            float: left;
             color: #3c4a50;
             font-size: 20px;
-            margin: 0 5px;
+            margin: 0 6px;
         }
 
         figure.effect-zoe p.description {
@@ -169,6 +175,21 @@
 
         figure.effect-zoe:hover p.description {
             opacity: 1;
+        }
+
+        figure.effect-zoe:hover p.icon-links a:first-child {
+            -webkit-transition-delay: 0.1s;
+            transition-delay: 0.1s;
+        }
+
+        figure.effect-zoe:hover p.icon-links a:nth-child(2) {
+            -webkit-transition-delay: 0.15s;
+            transition-delay: 0.15s;
+        }
+
+        figure.effect-zoe:hover p.icon-links a:nth-child(3) {
+            -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
         }
     </style>
 </head>
