@@ -1,0 +1,318 @@
+html body {
+    height: 100vh;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-align-center {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    height: 100%;
+    background: url('../image/kv_bg.jpg');
+    background-size: cover;
+}
+
+nav {
+    position: relative;
+    width: 100%;
+    padding-top: 30px;
+}
+
+nav .menu {
+    position: absolute;
+    z-index: 10;
+    right: 20px;
+    float: right;
+    width: 110px;
+}
+
+nav .menu .text {
+    float: left;
+    color: #fff;
+    vertical-align: middle;
+    line-height: 22px;
+}
+
+nav .menu.close-ph1 .text {
+    height: 2px;
+    overflow: hidden;
+    color: #fff;
+    transform: scale(0);
+    -moz-transform: scale(0);
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+}
+
+nav .menu.close-ph3 .text {
+    left: 0;
+    top: 0;
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+}
+
+nav .menu.close-ph2 .text {
+    width: 50px;
+    height: 22px;
+    background: transparent;
+}
+
+nav .menu .icon {
+    width: 50px;
+    height: 22px;
+    float: right;
+}
+
+nav .menu .icon .icon-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+nav .menu.close-ph2 .icon .icon-inner {
+    transition: all 0.28s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -moz-transition: all 0.28s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-transition: all 0.28s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -ms-transition: all 0.28s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+nav .menu.close-ph2 .icon .icon-inner:before {
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    top: 20px;
+}
+
+nav .menu .icon .icon-inner .line {
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+
+nav .menu.close-ph1 .icon .icon-inner .line {
+    width: 0;
+    left: 50%;
+    transition: all 0.28s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -moz-transition: all 0.28s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-transition: all 0.28s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -ms-transition: all 0.28s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+nav .menu.close-ph1 .icon .icon-inner:before, nav .menu.close-ph1 .icon .icon-inner:after {
+    width: 50%;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+}
+
+nav .menu .icon .icon-inner:before, nav .menu .icon .icon-inner:after {
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    transition: all 0.28s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -moz-transition: all 0.28s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-transition: all 0.28s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -ms-transition: all 0.28s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+nav .menu .icon .icon-inner:before {
+    content: '';
+    display: block;
+    top: 0;
+}
+
+nav .menu .icon .icon-inner:after {
+    content: '';
+    display: block;
+    bottom: 0;
+}
+
+.menu:hover .icon .icon-inner .line {
+    width: 50%;
+    left: 25%;
+}
+
+.menu_grap {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* menu grap*/
+
+.menu_grap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    background: #1e2147;
+    transition: all 0.48s cubic-bezier(0.075, 0.82, 0.565, 1);
+    -moz-transition: all 0.48s cubic-bezier(0.075, 0.82, 0.565, 1);
+    -webkit-transition: all 0.48s cubic-bezier(0.075, 0.82, 0.565, 1);
+    -ms-transition: all 0.48s cubic-bezier(0.075, 0.82, 0.565, 1);
+}
+
+.menu_grap.show {
+    opacity: 1;
+    z-index: 9;
+}
+
+.menu_grap .grap_inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.menu_grap .grap_inner .grap_content {
+    width: 490px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 245px);
+    left: -webkit-calc(50% - 245px);
+}
+
+
+/* ul li*/
+
+.menu_grap .grap_inner .grap_content .grap_content_inner ul li {
+    font-size: 4.2vh;
+    list-style: none;
+}
+
+.menu_grap .grap_inner .grap_content .grap_content_inner ul li a {
+    text-decoration: none;
+    color: #4452a9;
+    transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    position: relative;
+}
+
+.menu_grap .grap_inner .grap_content .grap_content_inner ul li a:before, .menu_grap .grap_inner .grap_content .grap_content_inner ul li a:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    transition: all 0.68s cubic-bezier(0.19, 1, 0.22, 1);
+    -moz-transition: all 0.68s cubic-bezier(0.19, 1, 0.22, 1);
+    -webkit-transition: all 0.68s cubic-bezier(0.19, 1, 0.22, 1);
+    -ms-transition: all 0.68s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.menu_grap .grap_inner .grap_content .grap_content_inner ul li a:before {
+    width: 7px;
+    height: 11px;
+    left: 52px;
+    background: url(../icon/arrow_head_white_right.svg) no-repeat center center;
+    background-size: contain;
+    transform: scale(0);
+    -moz-transform: scale(0);
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+}
+
+.menu_grap .grap_inner .grap_content .grap_content_inner ul li a:after {
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    left: 0;
+}
+.menu_grap .grap_inner .grap_content .grap_content_inner ul li a > * > * {
+    position: relative;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    transition: all 1.08s cubic-bezier(0.075, 0.82, 0.565, 1);
+    transition-property: all;
+    transition-duration: 1.08s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.565, 1);
+    transition-delay: initial;
+    -moz-transition: all 1.08s cubic-bezier(0.075, 0.82, 0.565, 1);
+    -webkit-transition: all 1.08s cubic-bezier(0.075, 0.82, 0.565, 1);
+    -ms-transition: all 1.08s cubic-bezier(0.075, 0.82, 0.565, 1);
+}
+.overlay-text {
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+}
+.overlay-text .overlay {
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    overflow: hidden;
+    display: block;
+    will-change: transform,width,left;
+    transition: all 0.28s cubic-bezier(0.65, -0.14, 0.52, 0.99);
+    -moz-transition: all 0.28s cubic-bezier(0.65, -0.14, 0.52, 0.99);
+    -webkit-transition: all 0.28s cubic-bezier(0.65, -0.14, 0.52, 0.99);
+    -ms-transition: all 0.28s cubic-bezier(0.65, -0.14, 0.52, 0.99);
+}
+.overlay-text .overlay .overlay-inner {
+    color: #9196b2 !important;
+    display: block;
+    position: relative;
+    will-change: transform,left;
+    transition: all 0.28s cubic-bezier(0.65, -0.14, 0.52, 0.99);
+    -moz-transition: all 0.28s cubic-bezier(0.65, -0.14, 0.52, 0.99);
+    -webkit-transition: all 0.28s cubic-bezier(0.65, -0.14, 0.52, 0.99);
+    -ms-transition: all 0.28s cubic-bezier(0.65, -0.14, 0.52, 0.99);
+}
+/**hover**/
+.menu_grap .grap_inner .grap_content .grap_content_inner ul li  a:hover:before {
+    transition-delay: 0.4s !important;
+    -moz-transition-delay: 0.4s !important;
+    -webkit-transition-delay: 0.4s !important;
+    -o-transition-delay: 0.4s !important;
+    -ms-transition-delay: 0.4s !important;
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+}
+.menu_grap .grap_inner .grap_content .grap_content_inner ul li  a:hover:after {
+    width: 55px;
+    transition-delay: 0.4s !important;
+    -moz-transition-delay: 0.4s !important;
+    -webkit-transition-delay: 0.4s !important;
+    -o-transition-delay: 0.4s !important;
+    -ms-transition-delay: 0.4s !important;
+}
+.menu_grap .grap_inner .grap_content .grap_content_inner ul li  a:hover > * > * {
+    -webkit-transform: translateX(76px);
+    transform: translateX(76px);
+}
+a:hover .overlay-text .overlay, a.active .overlay-text .overlay {
+    width: 100%;
+    left: 0;
+}
