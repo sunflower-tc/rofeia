@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>image animate type one</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <style>
+        @font-face {
+            font-family: 'iconfont';
+            /* project id 704846 */
+            src: url('http://at.alicdn.com/t/font_704846_fdp3cptrmnt.eot');
+            src: url('http://at.alicdn.com/t/font_704846_fdp3cptrmnt.eot?#iefix') format('embedded-opentype'),
+            url('http://at.alicdn.com/t/font_704846_fdp3cptrmnt.woff') format('woff'),
+            url('http://at.alicdn.com/t/font_704846_fdp3cptrmnt.ttf') format('truetype'),
+            url('http://at.alicdn.com/t/font_704846_fdp3cptrmnt.svg#iconfont') format('svg');
+        }
+
+        .iconfont {
+            font-family: "iconfont" !important;
+            /*font-size:16px;*/
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-stroke-width: 0.2px;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .icon-heart::before {
+            content: '\e711'
+        }
+
+        .icon-cart::before {
+            content: '\e603'
+        }
+
+        .icon-zan::before {
+            content: '\e692'
+        }
+
+        a {
+            outline: none;
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background: #2f3238;
+
+        }
+
+        .content {
+            margin: 100px auto;
+            max-width: 1000px;
+            color: #fff;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex_1 {
+            flex: 1;
+        }
+
+        .flex_3 {
+            flex: 3;
+        }
+
+        .flex-center {
+            display: flex;
+            justify-content: center;
+        }
+
+        .flex-align-center {
+            display: flex;
+            align-items: center;
+        }
+
+        figure {
+            position: relative;
+            float: left;
+            overflow: hidden;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        figure img {
+            position: relative;
+            display: block;
+            min-height: 100%;
+            max-width: 100%;
+            opacity: 0.8;
+        }
+
+        figure figcaption {
+            position: absolute;
+            top: auto;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            width: 100%;
+            height: 75px;
+            padding: 0 20px;
+            box-sizing: border-box;
+            background: #fff;
+            color: #3c4a50;
+            -webkit-transition: -webkit-transform 0.35s;
+            transition: transform 0.35s;
+            -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+        }
+
+        figure figcaption h2 {
+            float: left;
+            text-transform: uppercase;
+        }
+
+        figure.effect-zoe h2,
+        figure.effect-zoe p.icon-links a {
+            /* -webkit-transition: -webkit-transform 0.35s;
+            transition: transform 0.35s;
+            -webkit-transform: translate3d(0, 200%, 0);
+            transform: translate3d(0, 200%, 0); */
+        }
+
+        figure.effect-zoe p.icon-links {
+            float: right;
+            letter-spacing: 1px;
+        }
+
+        figure.effect-zoe p.icon-links a {
+            color: #3c4a50;
+            font-size: 20px;
+            margin: 0 5px;
+        }
+
+        figure.effect-zoe p.description {
+            position: absolute;
+            bottom: 150px;
+            padding: 10px;
+            color: #fff;
+            font-size: 18px;
+            letter-spacing: 1px;
+            text-transform: none;
+            opacity: 0;
+            -webkit-transition: opacity 0.35s;
+            transition: opacity 0.35s;
+            -webkit-backface-visibility: hidden;
+        }
+
+        /*hover*/
+
+        figure.effect-zoe:hover figcaption,
+        figure.effect-zoe:hover h2,
+        figure.effect-zoe:hover p.icon-links a {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+
+        figure.effect-zoe:hover h2 {
+            -webkit-transition-delay: 0.05s;
+            transition-delay: 0.05s;
+        }
+
+        figure.effect-zoe:hover p.description {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content flex">
+        <div class="flex_1">
+            <figure class="effect-zoe">
+                <img src="../image/1.jpg" alt="im1" />
+                <figcaption class="flex">
+                    <div class="flex-align-center flex_3">
+                        <h2 class="">hello
+                            <span>world</span>
+                        </h2>
+                    </div>
+                    <div class="flex-align-center flex_1">
+                        <p class="icon-links">
+                            <a href="#">
+                                <span class="iconfont icon-heart"></span>
+                            </a>
+                            <a href="#">
+                                <span class="iconfont icon-cart"></span>
+                            </a>
+                            <a href="#">
+                                <span class="iconfont icon-zan"></span>
+                            </a>
+                        </p>
+                    </div>
+                    <p class="description">Zoe never had the patience of her sisters. She deliberately punched the bear in his face.</p>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="flex_1">
+            <figure class="effect-zoe">
+                <img src="../image/2.jpg" alt="im1" />
+                <figcaption class="flex">
+                    <div class="flex-align-center flex_3">
+                        <h2 class="">hello
+                            <span>world</span>
+                        </h2>
+                    </div>
+                    <div class="flex-align-center flex_1">
+                        <p class="icon-links">
+                            <a href="#">
+                                <span class="iconfont icon-heart"></span>
+                            </a>
+                            <a href="#">
+                                <span class="iconfont icon-cart"></span>
+                            </a>
+                            <a href="#">
+                                <span class="iconfont icon-zan"></span>
+                            </a>
+                        </p>
+                    </div>
+                    <p class="description">Zoe never had the patience of her sisters. She deliberately punched the bear in his face.</p>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</body>
+
+</html>

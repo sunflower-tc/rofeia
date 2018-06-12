@@ -232,7 +232,7 @@ nav .menu .icon .icon-inner:after {
     width: 7px;
     height: 11px;
     left: 52px;
-    background: url(../icon/arrow_head_white_right.svg) no-repeat center center;
+    background: url("../icon/arrow_head_white_right.svg") no-repeat center center;
     background-size: contain;
     transform: scale(0);
     -moz-transform: scale(0);
@@ -246,15 +246,12 @@ nav .menu .icon .icon-inner:after {
     background-color: #fff;
     left: 0;
 }
+
 .menu_grap .grap_inner .grap_content .grap_content_inner ul li a > * > * {
     position: relative;
     -webkit-transform: translateX(0);
     transform: translateX(0);
     transition: all 1.08s cubic-bezier(0.075, 0.82, 0.565, 1);
-    transition-property: all;
-    transition-duration: 1.08s;
-    transition-timing-function: cubic-bezier(0.075, 0.82, 0.565, 1);
-    transition-delay: initial;
     -moz-transition: all 1.08s cubic-bezier(0.075, 0.82, 0.565, 1);
     -webkit-transition: all 1.08s cubic-bezier(0.075, 0.82, 0.565, 1);
     -ms-transition: all 1.08s cubic-bezier(0.075, 0.82, 0.565, 1);
@@ -263,8 +260,9 @@ nav .menu .icon .icon-inner:after {
     position: relative;
     display: inline-block;
     font-weight: 400;
-}
-.overlay-text .overlay {
+  }
+  
+  .overlay-text .overlay {
     width: 0;
     height: 100%;
     position: absolute;
@@ -272,24 +270,27 @@ nav .menu .icon .icon-inner:after {
     left: 50%;
     overflow: hidden;
     display: block;
-    will-change: transform,width,left;
+    will-change: transform, width, left;
     transition: all 0.28s cubic-bezier(0.65, -0.14, 0.52, 0.99);
     -moz-transition: all 0.28s cubic-bezier(0.65, -0.14, 0.52, 0.99);
     -webkit-transition: all 0.28s cubic-bezier(0.65, -0.14, 0.52, 0.99);
     -ms-transition: all 0.28s cubic-bezier(0.65, -0.14, 0.52, 0.99);
-}
-.overlay-text .overlay .overlay-inner {
+  }
+  
+  .overlay-text .overlay .overlay-inner {
     color: #9196b2 !important;
     display: block;
     position: relative;
-    will-change: transform,left;
+    will-change: transform, left;
     transition: all 0.28s cubic-bezier(0.65, -0.14, 0.52, 0.99);
     -moz-transition: all 0.28s cubic-bezier(0.65, -0.14, 0.52, 0.99);
     -webkit-transition: all 0.28s cubic-bezier(0.65, -0.14, 0.52, 0.99);
     -ms-transition: all 0.28s cubic-bezier(0.65, -0.14, 0.52, 0.99);
-}
+  }
+
 /**hover**/
-.menu_grap .grap_inner .grap_content .grap_content_inner ul li  a:hover:before {
+
+.menu_grap .grap_inner .grap_content .grap_content_inner ul li a:hover:before {
     transition-delay: 0.4s !important;
     -moz-transition-delay: 0.4s !important;
     -webkit-transition-delay: 0.4s !important;
@@ -300,7 +301,8 @@ nav .menu .icon .icon-inner:after {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
 }
-.menu_grap .grap_inner .grap_content .grap_content_inner ul li  a:hover:after {
+
+.menu_grap .grap_inner .grap_content .grap_content_inner ul li a:hover:after {
     width: 55px;
     transition-delay: 0.4s !important;
     -moz-transition-delay: 0.4s !important;
@@ -308,11 +310,20 @@ nav .menu .icon .icon-inner:after {
     -o-transition-delay: 0.4s !important;
     -ms-transition-delay: 0.4s !important;
 }
-.menu_grap .grap_inner .grap_content .grap_content_inner ul li  a:hover > * > * {
+
+.menu_grap .grap_inner .grap_content .grap_content_inner ul li a:hover > * > * {
     -webkit-transform: translateX(76px);
     transform: translateX(76px);
 }
 a:hover .overlay-text .overlay, a.active .overlay-text .overlay {
     width: 100%;
     left: 0;
-}
+  }
+  a:hover .overlay-text, a.active .overlay-text {
+    transition: all 0.58s cubic-bezier(0.075, 0.82, 0.565, 1);
+    -moz-transition: all 0.58s cubic-bezier(0.075, 0.82, 0.565, 1);
+    -webkit-transition: all 0.58s cubic-bezier(0.075, 0.82, 0.565, 1);
+    -ms-transition: all 0.58s cubic-bezier(0.075, 0.82, 0.565, 1);
+    color: transparent !important;
+  }
+  
