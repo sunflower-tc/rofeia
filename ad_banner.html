@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>adidas</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <style>
+                /* 清楚浮动 */
+
+        .clearfix:before, .clearfix:after {
+            content: ".";
+            display: block;
+            height: 0;
+            visibility: hidden;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            zoom: 1;
+        }
+        .flex {
+            display: flex;
+        }
+
+        .flex-center {
+            display: flex;
+            justify-content: center;
+        }
+
+        .flex-align-center {
+            display: flex;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .menu {
+            width: 100%;
+            height: 48px;
+            padding: 20px 0;
+            background: #000;
+        }
+
+        .menu_inner {
+            width: 100%;
+            height: 100%;
+            max-width: 1220px;
+            margin: 0 auto;
+            padding: 0 16px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .menu .menu_inner .adida_logo {
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: 70px;
+            height: 48px;
+            display: block;
+            flex: 1;
+            background: url('./icon/adidas-logo.svg');
+            background-repeat: no-repeat;
+            background-position: 0;
+            background-size: contain;
+        }
+
+        .menu_inner_content {
+            flex: 9;
+            margin-left: 30px;
+
+        }
+        .menu_inner_content ul li {
+            list-style: none;
+            float: left;
+            text-transform: uppercase;
+            color: #fff;
+            margin: 0 10px;
+            height:38px;
+            padding:0 10px;
+            box-sizing: border-box;
+        }
+
+        .menu_expan {
+            position: absolute;
+            top: 68px;
+            width: 100%;
+            height: 500px;
+            background: #fff;
+          
+        }
+
+        .menu_expan .menu_expan_inner {
+            width: 100%;
+            max-width: 1220px;
+            height: 100%;
+            margin: 0 auto;
+        }
+        .menu_expan .menu_expan_inner ul{
+            width:100%;
+            padding:0;
+            margin:0;
+        }
+        .menu_expan .menu_expan_inner ul li{
+            text-align:left;
+            list-style: none;
+        }
+        .menu_expan .menu_expan_inner ul li.type{
+                margin-right:80px;
+                float: left;
+        }  
+        .menu_expan .menu_expan_inner ul li.type h4{
+            font-weight: bold;
+        } 
+        .menu_expan .menu_expan_inner ul.little li{
+            font-size:14px;
+            margin:5px 0 ;
+        }
+        .menu_expan .menu_expan_inner ul.little li a:hover{
+            text-decoration: underline;
+        }
+        .menu_inner_content ul li.nav-up-selected{
+            display: block;
+            background: #fff;
+            color:#000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="menu_inner flex">
+                <a href="" class="adida_logo"></a>
+                <div class="menu_inner_content">
+                    <ul class="clearfix">
+                        <li _t_nav="men">
+                            <a>men</a>
+
+                        </li>
+                        <li _t_nav="women">
+                            <a>women</a>
+                        </li>
+                        <li _t_nav="kids">
+                            <a>kids</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu_expan">
+                <div class="menu_expan_inner clearfix">
+                    <ul class="clearfix expan_inner" _t_nav="men" id="men" style="display: none">
+                        <li class="type">
+                            <h4>FEATURED</h4>                       
+                            <ul class="little">
+                                <li><a> New Arrivals</a></li>
+                                <li><a> Best Sellers</a></li>
+                                <li><a> Release Dates</a></li>
+                                <li><a> New Arrivals</a></li>
+                            </ul>
+                        </li>
+                        <li class="type">
+                            <h4>SHOES</h4>
+                            <ul class="little">
+                                    <li><a> Originals</a></li>
+                                    <li><a> Running</a></li>
+                                    <li><a> Sandals & Slides</a></li>
+                                    <li><a> Soccer</a></li>
+                                    <li><a> Hiking</a></li>
+                                    <li><a> Tennis</a></li>
+                                    <li><a> Softball</a></li>
+                                    <li><a> Golf</a></li>
+                                </ul>
+                        </li>
+                        <li class="type">
+                            <h4>FEATURED</h4>                       
+                                <ul class="little">
+                                    <li><a> New Arrivals</a></li>
+                                    <li><a> Best Sellers</a></li>
+                                    <li><a> Release Dates</a></li>
+                                    <li><a> New Arrivals</a></li>
+                                </ul>
+                         </li>
+                        <li class="type">
+                            <h4>SHOES</h4>
+                                <ul class="little">
+                                    <li><a> Originals</a></li>
+                                    <li><a> Running</a></li>
+                                    <li><a> Sandals & Slides</a></li>
+                                    <li><a> Soccer</a></li>
+                                    <li><a> Hiking</a></li>
+                                    <li><a> Tennis</a></li>
+                                    <li><a> Softball</a></li>
+                                    <li><a> Golf</a></li>
+                                </ul>
+                        </li>
+                    </ul>
+                    <ul class="clearfix expan_inner" _t_nav="women" id="women" style="display: none">
+                            <li class="type">
+                                <h4>FEATURED</h4>                       
+                                <ul class="little">
+                                    <li><a> TEST Arrivals</a></li>
+                                    <li><a> Best Sellers</a></li>
+                                    <li><a> Release Dates</a></li>
+                                    <li><a> New Arrivals</a></li>
+                                </ul>
+                            </li>
+                            <li class="type">
+                                <h4>SHOES</h4>
+                                <ul class="little">
+                                        <li><a> Originals</a></li>
+                                        <li><a> Running</a></li>
+                                        <li><a> Sandals & Slides</a></li>
+                                        <li><a> Soccer</a></li>
+                                        <li><a> Hiking</a></li>
+                                        <li><a> Tennis</a></li>
+                                        <li><a> Softball</a></li>
+                                        <li><a> Golf</a></li>
+                                    </ul>
+                            </li>
+                            <li class="type">
+                                <h4>FEATURED</h4>                       
+                                    <ul class="little">
+                                        <li><a> New Arrivals</a></li>
+                                        <li><a> Best Sellers</a></li>
+                                        <li><a> Release Dates</a></li>
+                                        <li><a> New Arrivals</a></li>
+                                    </ul>
+                             </li>
+                            <li class="type">
+                                <h4>SHOES</h4>
+                                    <ul class="little">
+                                        <li><a> Originals</a></li>
+                                        <li><a> Running</a></li>
+                                        <li><a> Sandals & Slides</a></li>
+                                        <li><a> Soccer</a></li>
+                                        <li><a> Hiking</a></li>
+                                        <li><a> Tennis</a></li>
+                                        <li><a> Softball</a></li>
+                                        <li><a> Golf</a></li>
+                                    </ul>
+                            </li>
+                    </ul>
+                    <ul class="clearfix expan_inner" _t_nav="kids" id="kids" style="display: none">
+                            <li class="type">
+                                <h4>FEATURED</h4>                       
+                                <ul class="little">
+                                    <li><a> TEST Arrivals</a></li>
+                                    <li><a> Best Sellers</a></li>
+                                    <li><a> Release Dates</a></li>
+                                    <li><a> New Arrivals</a></li>
+                                </ul>
+                            </li>
+                            <li class="type">
+                                <h4>SHOES</h4>
+                                <ul class="little">
+                                        <li><a> Originals</a></li>
+                                        <li><a> Running</a></li>
+                                        <li><a> Sandals & Slides</a></li>
+                                        <li><a> Soccer</a></li>
+                                        <li><a> Hiking</a></li>
+                                        <li><a> Tennis</a></li>
+                                        <li><a> Softball</a></li>
+                                        <li><a> Golf</a></li>
+                                    </ul>
+                            </li>
+                            <li class="type">
+                                <h4>FEATURED</h4>                       
+                                    <ul class="little">
+                                        <li><a> New Arrivals</a></li>
+                                        <li><a> Best Sellers</a></li>
+                                        <li><a> Release Dates</a></li>
+                                        <li><a> New Arrivals</a></li>
+                                    </ul>
+                             </li>
+                            <li class="type">
+                                <h4>SHOES</h4>
+                                    <ul class="little">
+                                        <li><a> Originals</a></li>
+                                        <li><a> Running</a></li>
+                                        <li><a> Sandals & Slides</a></li>
+                                        <li><a> Soccer</a></li>
+                                        <li><a> Hiking</a></li>
+                                        <li><a> Tennis</a></li>
+                                        <li><a> Softball</a></li>
+                                        <li><a> Golf</a></li>
+                                    </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+   jQuery(document).ready(function () {
+			var qcloud = {};
+			$('[_t_nav]').hover(function () {
+				var _nav = $(this).attr('_t_nav');
+				clearTimeout(qcloud[_nav + '_timer']);
+				qcloud[_nav + '_timer'] = setTimeout(function () {
+					$('[_t_nav]').each(function () {
+                        console.log('2',$(this).attr('_t_nav'))
+                        console.log('1',_nav)
+                        if(_nav == $(this).attr('_t_nav')){
+                            $(this)[_nav == $(this).attr('_t_nav') ? 'addClass' : 'removeClass']('nav-up-selected');
+                        }else{
+                          $('#'+ $(this).attr('_t_nav')).css('display',"none")
+                        }
+					});
+					$('#' + _nav).stop().show();
+				}, 150);
+			}, function () {
+				var _nav = $(this).attr('_t_nav');
+				clearTimeout(qcloud[_nav + '_timer']);
+				qcloud[_nav + '_timer'] = setTimeout(function () {
+					$('[_t_nav]').removeClass('nav-up-selected');
+					$('#' + _nav).stop().hide();
+				}, 150);
+			});
+		});
+</script>
+</html>
