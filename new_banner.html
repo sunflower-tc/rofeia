@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>new banner</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <style>
+        html,
+        body {
+            width: 100%;
+        }
+
+        .container {
+            width: 100%;
+            height: 80vh;
+            max-height: 800px;
+            overflow: hidden;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            -webkit-transition: -webkit-transform 1s;
+            transition: transform 1s;
+            -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+            transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+            -webkit-transform: translateY(0%);
+            -moz-transform: translateY(0%);
+            -ms-transform: translateY(0%);
+            -o-transform: translateY(0%);
+            transform: translateY(0%);
+        }
+
+        .slide>.background.slide-1 {
+            z-index: 4;
+            background-image: url("./image/coworking-studio-cover-1.jpg");
+        }
+
+        .slide>.background.slide-2 {
+            z-index: 3;
+            background-image: url("./image/coworking-studio-cover-2.jpg");
+        }
+
+        .slide>.background.slide-3 {
+            z-index: 2;
+            background-image: url("./image/coworking-studio-cover-3.jpg");
+        }
+
+        .slide>.background.slide-4 {
+            z-index: 1;
+            background-image: url("./image/coworking-studio-cover-4.jpg");
+        }
+
+        .slide.slide-1>.background.slide-1 {
+            -webkit-transform: translateY(100%);
+            -moz-transform: translateY(100%);
+            -ms-transform: translateY(100%);
+            -o-transform: translateY(100%);
+            transform: translateY(100%);
+        }
+
+        .slide.slide-2>.background.slide-1,
+        .slide.slide-2>.background.slide-2 {
+            -webkit-transform: translateY(100%);
+            -moz-transform: translateY(100%);
+            -ms-transform: translateY(100%);
+            -o-transform: translateY(100%);
+            transform: translateY(100%);
+        }
+
+        .slide.slide-3>.background.slide-1,
+        .slide.slide-3>.background.slide-2,
+        .slide.slide-3>.background.slide-3 {
+            -webkit-transform: translateY(100%);
+            -moz-transform: translateY(100%);
+            -ms-transform: translateY(100%);
+            -o-transform: translateY(100%);
+            transform: translateY(100%);
+        }
+
+        .slide.slide-4>.background.slide-4 {
+            -webkit-transform: translateY(100%);
+            -moz-transform: translateY(100%);
+            -ms-transform: translateY(100%);
+            -o-transform: translateY(100%);
+            transform: translateY(100%);
+        }
+
+        .add {
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 10px;
+            z-index: 9;
+        }
+        .btn{
+            width: 200px;
+            height:45px;
+            background: #66cccc;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="slide">
+            <div class="background slide-1"></div>
+            <div class="background slide-2"></div>
+            <div class="background slide-3"></div>
+            <div class="background slide-4"></div>
+        </div>
+        <div class="add">
+            <div class="btn"></div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        homeCoverAnim();
+        var time1;
+        var timeSlide;
+        function homeCoverAnim() {
+             timeSlide = 3000;
+            console.log('come in')
+             time1 = setTimeout(function () {
+                 console.log('1')
+                $('.slide').removeClass('slide-1').addClass('slide-2');
+                setTimeout(function () {
+                    console.log('2')
+                    $('.slide').removeClass('slide-2').addClass('slide-3');
+                    setTimeout(function () {
+                        console.log('3')
+                        $('.slide').removeClass('slide-3').addClass('slide-4');
+                        setTimeout(function () {
+                            console.log('4')
+                            $('.slide').removeClass('slide-4').addClass('slide-1');
+                            homeCoverAnim();
+                        }, timeSlide);
+                    }, timeSlide);
+                }, timeSlide);
+            }, timeSlide);
+        }
+        $('.btn').click(function(){
+           var className = $('.slide').attr('class');
+            $('.slide').addClass(className);
+            console.log('slide',$('.slide'))
+        })
+        // $('.btn').mouseout(function(){
+        //    var className = $('.slide').attr('class');
+        //     clearTimeout(time1)
+        //     $('.slide').addClass(className);
+        // })
+    })
+</script>
+
+</html>

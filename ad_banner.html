@@ -98,7 +98,6 @@
             width: 100%;
             height: 500px;
             background: #fff;
-            display:none 
         }
 
         .menu_expan .menu_expan_inner {
@@ -316,7 +315,7 @@
                 </div>
             </div>
         </div>
-         <div class="swiper-container">
+         <!-- <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img src="./image/ad_banner1.jpg"/>
@@ -325,12 +324,12 @@
                             <img src="./image/ad_banner2.jpg"/>
                         </div>
                 </div>
-                <!-- Add Pagination -->
+
                 <div class="swiper-pagination"></div>
-                <!-- Add Arrows -->
+
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
-        </div>
+        </div> -->
     </div>
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
@@ -344,8 +343,6 @@
 				clearTimeout(qcloud[_nav + '_timer']);
 				qcloud[_nav + '_timer'] = setTimeout(function () {
 					$('[_t_nav]').each(function () {
-                        console.log('2',$(this).attr('_t_nav'))
-                        console.log('1',_nav)
                         if(_nav == $(this).attr('_t_nav')){
                             $(this)[_nav == $(this).attr('_t_nav') ? 'addClass' : 'removeClass']('nav-up-selected');
                         }else{
@@ -377,13 +374,10 @@
                     prevEl: '.swiper-button-prev',
                 },
            });
-           $('.swiper-slide').mouseenter(function () {
-            console.log('mouseenter');
-            
+           $('.swiper-slide').mouseenter(function () {            
              mySwiper.autoplay.stop();
              })
             $('.swiper-slide').mouseleave(function () {
-                console.log('mouseleave');
                 mySwiper.autoplay.start();
             })
 
